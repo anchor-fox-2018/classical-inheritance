@@ -1,9 +1,23 @@
 "use strict"
 
+class SuperPower {
+    constructor() {
+
+    }
+    use_laser_vision(){
+        console.log("pew pew pew");
+    }
+    be_invisible(){
+        console.log("hilang");
+    }
+
+}
+
 class Animal {
     constructor(num_legs, is_warm_blooded) {
         this.num_legs = 2;
         this.is_warm_blooded = true;
+        this._superpower = new SuperPower();
     }
 }
 
@@ -60,3 +74,6 @@ let binatang2 = new Frog();
 console.log(`${binatang2.num_legs} ${binatang2.is_warm_blooded}`);
 let binatang1 = new Chicken();
 console.log(`${binatang1.num_legs} ${binatang1.is_warm_blooded}`);
+
+let binatang3 = new Frog();
+binatang3._superpower.be_invisible();
